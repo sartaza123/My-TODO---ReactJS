@@ -4,7 +4,7 @@ import ToDoList from "./components/ToDoList";
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <ToDoList />
     </>
   );

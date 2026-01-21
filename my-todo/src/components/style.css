@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+.ToDoList {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.ToDoList::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.05); /* prevents blur edges */
+  z-index: -1;
+}
+
+/* Hide scrollbar but keep scroll working */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
