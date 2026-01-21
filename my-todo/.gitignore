@@ -1,0 +1,40 @@
+# ==============================
+# Dependencies (NEVER COMMIT)
+# ==============================
+node_modules/
+
+# ==============================
+# Build / Output
+# ==============================
+dist/
+build/
+
+# ==============================
+# Environment variables
+# ==============================
+.env
+.env.local
+.env.*.local
+
+# ==============================
+# Logs
+# ==============================
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==============================
+# Tool caches
+# ==============================
+.vite/
+.eslintcache
+.cache/
+coverage/
+
+# ==============================
+# OS / Editor files
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
