@@ -1,7 +1,11 @@
+import Header from "./components/Header";
+import ToDoList from "./components/ToDoList";
+
 function App() {
   return (
     <>
-      <h1 className="text-white bg-black">Sartaz</h1>
+      <Header />
+      <ToDoList />
     </>
   );
 }
