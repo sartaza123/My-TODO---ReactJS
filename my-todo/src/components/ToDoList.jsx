@@ -1,25 +1,91 @@
+import { useState } from "react";
+import Header from "./Header";
 import ToDoItem from "./ToDoItem";
 import "./style.css";
 
 function ToDoList() {
+  const [input, setInput] = useState("");
+  const [todos, setTodos] = useState([]);
+  const [edit, setEdit] = useState(null);
+
+  // Add & Edit Todo Function with id ===============
+
+  function handleAddTodo() {
+    if (!input.trim()) return;
+
+    // IF editing
+    if (edit !== null) {
+      setTodos((prevTodos) =>
+        prevTodos.map((todo) =>
+          todo.id === edit
+            ? { ...todo, text: input } // update text
+            : todo,
+        ),
+      );
+
+      setEdit(null); // exit edit mode
+    }
+    // ELSE adding new todo
+    else {
+      setTodos([
+        ...todos,
+        {
+          id: Date.now(),
+          text: input,
+        },
+      ]);
+    }
+
+    setInput(""); // clear input always
+  }
+  function handleEdit(id, text) {
+    setInput(text); // put text into input
+    setEdit(id); // remember which todo to edit
+  }
+
+  // handle delete function
+  function handleDelete(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
   return (
-    <div className="ToDoList flex justify-center p-14 min-h-screen">
+    // main area for background image ==============
+    <div className="ToDoList flex justify-center flex-col gap-4 items-center p-14 min-h-screen">
+      {/* header omported from header Component ============= */}
+      <Header />
+
+      {/* Todo Msin container ========== */}
       <div className=" max-w-4xl w-full rounded-2xl bg-white/20 backdrop-blur-lg border border-white/30 shadow-xl p-10 flex flex-col ">
+        {/* To-Do Input Area Container ============= */}
         <div className="flex justify-between my-4 p-4 rounded-2xl backdrop-blur-lg border border-white/30 shadow-xl">
           <input
             type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             placeholder="Enter todo"
-            className=" h-12 px-4 w-157.5 rounded-xl border border-white/40 text-white placeholder-white/70  focus:outline-none focus:ring-2 focus:ring-white/50 "
+            className=" h-12 px-4 w-[630px] rounded-xl border border-white/40 text-white placeholder-white/70  focus:outline-none focus:ring-2 focus:ring-white/50 "
           />
-          <button className=" rounded-xl  backdrop-blur-xl border border-white/40 shadow-xl px-4 h-12 text-white cursor-pointer">
+
+          <button
+            className=" rounded-xl  backdrop-blur-xl border border-white/40 shadow-xl px-4 h-12 text-white cursor-pointer"
+            onClick={handleAddTodo}
+          >
             ADD TO-DO
           </button>
         </div>
         <div className="flex flex-col overflow-y-auto hide-scrollbar">
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
+          {/* Added lists ============= */}
+          <div className="lists">
+            {todos.map((todo) => (
+              <ToDoItem
+                key={todo.id}
+                id={todo.id}
+                data={todo.text}
+                onDelete={handleDelete}
+                onEdit={handleEdit}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
