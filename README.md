@@ -28,15 +28,13 @@ The app allows users to add, edit, complete, and delete todos with a clean glass
 ## How to Run the Project (After Removing `node_modules`) =========
 
 ### 1 Clone the repository
-
 git clone https://github.com/sartaza123/My-TODO---ReactJS.git
 
 ### 2 Install dependencies
-
 npm install
 
 ### 3 Start the development server
-
+npm run dev
 http://localhost:5173/
 
 ---
