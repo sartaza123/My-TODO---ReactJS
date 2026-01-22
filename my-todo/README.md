@@ -1,16 +1,67 @@
-# React + Vite
+# My TODO — ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Todo application built using **React**, **Vite**, and **Tailwind CSS**.  
+The app allows users to add, edit, complete, and delete todos with a clean glass-style UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Add new todos
+- Edit existing todos
+- Mark todos as completed
+- Delete todos
+- Glassmorphism UI with styled scrollbar
+- Fully responsive layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Functional Components + Hooks)
+- Vite
+- Tailwind CSS
+- CSS (for background effects)
+
+---
+
+## How to Run the Project (After Removing `node_modules`) =========
+
+### 1 Clone the repository
+
+git clone https://github.com/sartaza123/My-TODO---ReactJS.git
+
+### 2 Install dependencies
+
+npm install
+
+### 3 Start the development server
+
+http://localhost:5173/
+
+---
+
+My-TODO---ReactJS/
+├── src/
+│ ├── components/
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── public/
+│ └── bg.svg
+├── style.css
+├── package.json
+├── tailwind.config.js
+└── README.md
+
+---
+
+NOTE ------
+
+node_modules is not committed to GitHub.
+Always run npm install after cloning the repository.
+No backend required — this is a frontend-only project.
+
+### Author
+
+    MD SARTAZ ANSARI- FRONT-END DEVELOPER
