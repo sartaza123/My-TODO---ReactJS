@@ -93,7 +93,7 @@ function ToDoList() {
             placeholder-white/70 
             focus:outline-none
             focus:ring-2
-            focus:ring-purple-500/50 "
+            focus:ring-yellow-900/50 "
           />
 
           <button
@@ -102,9 +102,9 @@ function ToDoList() {
             border-2 px-4 h-12
             border-white/40 shadow-xl
             text-white cursor-pointer
-            hover:bg-purple-500/20
-            hover:border-purple-500/70
-            hover:text-purple-500/70"
+            hover:bg-yellow-900/20
+            hover:border-yellow-900/70
+            hover:text-yellow-900/70"
             onClick={handleAddTodo}
           >
             ADD TO-DO

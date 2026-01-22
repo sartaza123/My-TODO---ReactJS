@@ -15,9 +15,9 @@
   background-image: url("../assets/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 
-  filter: blur(6px) brightness(0.6);
+  filter: blur(2px) brightness(0.6);
   transform: scale(1.05); /* prevents blur edges */
   z-index: -1;
 }

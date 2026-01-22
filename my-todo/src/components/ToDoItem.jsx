@@ -16,7 +16,7 @@ function ToDoItem({ id, data, onDelete, onEdit }) {
         type="checkbox"
         checked={completed}
         onChange={() => setCompleted(!completed)}
-        className=" scale-[1.3] accent-purple-600 cursor-pointer my-4"
+        className=" scale-[1.3] accent-yellow-900 cursor-pointer my-4"
       />
 
       {/* Todo Item */}
