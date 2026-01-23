@@ -6,9 +6,8 @@ function ToDoItem({ id, data, onDelete, onEdit }) {
   return (
     <div
       className="
-      flex justify-between
-      items-center
-      my-3 py-1 px-4
+      flex items-center
+      gap my-3 py-1 px-4
       border-b border-white/70"
     >
       {/* Checbox for completed work*/}
@@ -22,9 +21,9 @@ function ToDoItem({ id, data, onDelete, onEdit }) {
       {/* Todo Item */}
       <h3
         className={`
-          w-[600px] px-4 h-12
+          flex-1 min-w-0 whitespace-normal
+          px-4 wrap-break-word
           text-white
-          flex items-center
           border-b border-white/40 
           ${completed ? "line-through decoration-white opacity-80" : ""} `}
       >
@@ -34,15 +33,17 @@ function ToDoItem({ id, data, onDelete, onEdit }) {
       {/* edit button */}
       <button
         onClick={() => onEdit(id, data)}
-        className=" rounded-xl 
-        backdrop-blur-xl
+        className="
+        sm:rounded-0 md:rounded-lg lg:rounded-xl
+        px-3 sm:w-16 md:w-20 lg:w-24
+        backdrop-blur-xl m-3
+        cursor-pointer
         border border-white/40
-        shadow-xl px-4 h-12
-        text-white
+        sm:h-8 md:h-10 lg:h-12
+        text-white shadow-xl
         hover:bg-green-400/10
         hover:text-green-400
         hover:border-green-400/70"
-        cursor-pointer
       >
         Edit
       </button>
@@ -50,12 +51,12 @@ function ToDoItem({ id, data, onDelete, onEdit }) {
       {/* delete button */}
       <button
         onClick={() => onDelete(id)}
-        className=" rounded-xl 
-        backdrop-blur-xl
-        border border-white/40
-        shadow-xl px-4 h-12
-        text-white
-        cursor-pointer
+        className="
+        backdrop-blur-xl border border-white/40
+        sm:rounded-0 md:rounded-lg lg:rounded-xl
+        shadow-xl px-3 sm:w-16 md:w-20 lg:w-24
+        sm:h-8 md:h-10 lg:h-12
+        text-white cursor-pointer
         hover:bg-red-500/20
         hover:text-red-500
         hover:border-red-500/70"
