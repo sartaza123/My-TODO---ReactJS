@@ -30,10 +30,13 @@ The app allows users to add, edit, complete, and delete todos with a clean glass
 ### 1 Clone the repository
 git clone https://github.com/sartaza123/My-TODO---ReactJS.git
 
-### 2 Install dependencies
+### 2 create directory fot the app path
+cd my-todo
+
+### 3 Install dependencies
 npm install
 
-### 3 Start the development server
+### 4 Start the development server
 npm run dev
 
 a link will create like ( http://localhost:5173/ ) open it
